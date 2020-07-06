@@ -24,8 +24,8 @@
         <img id="Share" src="img/share.svg" alt="share">
 
     <div class="flex-container" id="Downloadbanner">
-        <button class="toData active" id="WORLDbtn" onclick="drawChart(value)" value="Approved_applications">Solicitudes aprobadas de los programas de mantenimiento del empleo</button>
-        <button class="toData" id="OECDbtn" onclick="drawChart(value)" value="Actual_use">Utilización real</button>
+        <button class="toData active" id="WORLDbtn" onclick="drawChart(value)" value="Approved_applications">Solicitudes aprobadas para los programas de mantenimiento del empleo</button>
+        <button class="toData" id="OECDbtn" onclick="drawChart(value)" value="Actual_use">Participación real</button>
     </div>
         <div id="GDPchart"></div>
         <div id="source" class="source">Fuente: <a class="source" href="https://doi.org/10.1787/1686c758-en" target="_blank">OECD (2020), OECD Employment Outlook 2020: Worker Security and the COVID-19 Crisis, OCDE Publishing, Paris.</a></div><div id="shareLink">
@@ -241,7 +241,7 @@
                 if (d.Actual_use == "#N/A")
                     htmlText = "En <b>" + d.Country + "</b>, el" + d.Approved_applications + "% de los trabajadores han sido incluidos en los programas de mantenimiento del empleo, o sea " + d3.format(",.0f")(parseFloat(d.headcount) * 1000)+ " personas en total";
                 else
-                    htmlText = "En <b>" + d.Country +"</b>, el" + d.Actual_use + "% de los trabajadores se beneficiaron efectivamente de los programas de mantenimiento del empleo, mientras que el " + d.Approved_applications + "%, es decir "+  d3.format(",.0f")(parseFloat(d.headcount) * 1000) + " personas, podría haberse beneficiado en total" ;
+                    htmlText = "En <b>" + d.Country +"</b>, el" + d.Actual_use + "% de los trabajadores efectivamente se benefició de los programas de mantenimiento del empleo, mientras que el " + d.Approved_applications + "%, es decir "+  d3.format(",.0f")(parseFloat(d.headcount) * 1000) + " personas en total, podría haber participado" ;
                 
 
                 if (event.pageX < width - 75) {
